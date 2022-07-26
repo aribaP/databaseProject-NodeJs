@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Book A car</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="font/flaticon.css">
+    <link rel="stylesheet" type="text/css" href="carbooking.css" />
+  </head>
+  <body>
+   
+    <div class="container" >
+    <div class="OurVision">
+      <img src="logo.jpg" alt="logo" srcset="">
+     <h2>OUR VISION</h2>
+      <p>Connect safe,convenient,and affortable cars with people who need themto live and work.</p>
+    </div>
+    <br>
+    <br>
+    <br>
+      <div class="book">
+        <div class="description">
+          <h1><strong>Book</strong> your Car</h1>
+          <p>
+            This improves everyone’s quality of life, including people who can’t own cars or don’t have access to the vehicles they need. Our connected car technology allows guests to book a wide variety of vehicles directly from our app without ever having to meet anyone in person, carry an access card, wait in line, or coordinate picking up keys.
+          </p>
+          <ul>
+            <li>Super reliable service</li>
+            <li>24/7 customer service</li>
+            <li>Wide range cars</li>
+          </ul>
+        </div>
+        <div class="form" >
+          <form action="/getCarlist" method="GET">
+            <h5>PICK-UP DATE</h5>
+            <div class="inpbox">
+              <span class="flaticon-calendar"></span>
+             
+              <input type="date" name="toDate">
+            </div>
+            <h5>DROP-OFF DATE</h5>
+            <div class="inpbox">
+              <span class="flaticon-calendar"></span>
+              <input type="date" placeholder="Drop Date" name="fromDate">
+            </div>
+          <!-- <a href="getCarlist"> -->
+            <button  type="submit" class="subt">Search</button>   
+          <!-- </a>   -->
+          </form>
+          
+          <br>   
+          <button type="reset"  class="rst">Reset</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

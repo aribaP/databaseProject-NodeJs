@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Rent A CAR  | Available Cars</title>
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="vendors/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css">
+
+    <link rel="stylesheet" href="carlist.css">
+    <!-- End layout styles -->
+    <link rel="shortcut icon" href="favicon.ico" />
+  </head>
+  <body>
+
+    <div class="container-scroller">
+
+     <!-- partial:partials/_navbar.html -->
+     <%- include('./partials/navbar.ejs') %>
+
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+      <!-- partial:partials/_sidebar.html -->
+      <%- include('./partials/barside.ejs') %>
+      <!-- partial -->
+        <div class="main-panel" >
+          <div class="content-wrapper">
+            <div class="row" id="proBanner">
+            </div>
+
+            <div class="page-header">
+
+              <h3 class="page-title"> See My Cars </h3>
+            </div>
+           
+            <%if(result.length > 0){ %>
+            <% for(var i = 0; i < result.length; i++) { %>
+            
+            <div class="row">
+              <div class="col-sm-8">
+                <div class="products_wrpr">
+                  <div class="product col-lg-11">
+                    
+                    
+
+                        <br><br><br>
+                            <p><b> Number Plate :</b> <%= result[i].NumberPlate %></p>
+                            <p><b> Issuance Date :</b> <%= result[i].IDate %></p>
+                            <p><b> Return Date :</b> <%= result[i].RDate %></p>
+                            <p><b> Amount :</b> <%= result[i].Amount %></p>
+                      
+
+                        <br><br>
+                        <br><br>
+                        
+                          </a>
+                          
+                         
+                        <br><br><br>
+                     
+                  </div>
+                   
+                </div>
+                
+              </div>
+            </div>
+            <br><br><br><br><br>
+            <% } %>
+                      <%}%>
+                      <% if(result.length <= 0){ %>
+                          <div class="alert alert-dark" role="alert">
+                              No cars available!
+                          </div>
+                      <% } %>  
+            
+          </div>
+        </form>
+          <!-- content-wrapper ends -->
+          <!-- partial:partials/_footer.html -->
+          <%- include('./partials/footer.ejs') %>
+          <!-- partial -->
+        </div>
+        <!-- main-panel ends -->
+      </div>
+      <!-- page-body-wrapper ends -->
+    </div>
+    <!-- container-scroller -->
+    <!-- plugins:js -->
+    <script src=" vendors/js/vendor.bundle.base.js"></script>
+
+    <script src=" js/off-canvas.js"></script>
+    <script src=" js/hoverable-collapse.js"></script>
+    <script src=" js/misc.js"></script>
+    <!-- endinject -->
+    <!-- Custom js for this page -->
+    <script src=" js/file-upload.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <!-- End custom js for this page -->
+  </body>
+</html>

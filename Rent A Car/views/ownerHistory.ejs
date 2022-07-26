@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Rent A CAR  | Add Your Car</title>
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="vendors/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css">
+
+    <link rel="stylesheet" href="addcar.css">
+    <!-- End layout styles -->
+    <link rel="shortcut icon" href="favicon.ico" />
+  </head>
+  <body>
+    <div class="container-scroller">
+
+      <!-- partial:../../partials/_navbar.html -->
+      <%- include('./partials/navbar.ejs') %>
+      <!-- partial -->
+
+      <div class="container-fluid page-body-wrapper">
+        <!-- partial:../../partials/_sidebar.html -->
+        <%- include('./partials/sidebar.ejs') %>
+        <!-- partial -->
+        <div class="main-panel">
+
+          <div class="content-wrapper">
+            <div class="page-header">
+              <h3 class="page-title"> Fill the car form below </h3>
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="#">Form</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Form elements</li>
+                </ol>
+              </nav>
+            </div>
+            <div class="row">
+              <div class="col-12 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h2 class="card-title">Your Car History</h2>
+                    <form action='/ownerhistory' class="pt-3" method="get">
+                    <form class="forms-sample">
+
+                        <table class="table table-light table-striped">
+                            <thead>
+                              <tr>
+                                <th>S.No</th>
+                                <th>Number Plate</th>
+                                <th>Date And Time</th>
+                                
+                              </tr>
+                            </thead>
+                            <tbody>
+                                <% if(result.length > 0){ %>
+                                    <% for(var i = 0; i < result.length; i++) { %>
+                                    <tr>
+                                        <td><%=i + 1%></td>
+                                        <td><%=result[i].nPlate%></td>
+                                        <td><%=result[i].PostDate%></td>
+                                        
+                                        
+                                    </tr>
+                                    <%}%>
+                                <%}%>
+                               
+                            </tbody>
+                          </table>
+                      
+                 
+                    </form>
+                    </form>
+                  </div>
+                </div>
+              </div>
+
+              
+          <!-- partial -->
+        </div>
+        <!-- main-panel ends -->
+      </div>
+      <!-- footer -->
+      <%- include('./partials/footer.ejs') %>
+      <!-- End of footer -->
+      
+      <!-- page-body-wrapper ends -->
+    </div>
+    <!-- container-scroller -->
+    <!-- plugins:js -->
+    
+    <script src=" vendors/js/vendor.bundle.base.js"></script>
+
+    <script src=" js/off-canvas.js"></script>
+    <script src=" js/hoverable-collapse.js"></script>
+    <script src=" js/misc.js"></script>
+    <!-- endinject -->
+    <!-- Custom js for this page -->
+    <script src=" js/file-upload.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <!-- End custom js for this page -->
+  </body>
+</html>

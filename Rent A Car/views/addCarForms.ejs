@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Rent A CAR  | Add Your Car</title>
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="vendors/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css">
+
+    <link rel="stylesheet" href="addcar.css">
+    <!-- End layout styles -->
+    <link rel="shortcut icon" href="favicon.ico" />
+  </head>
+  <body>
+    <div class="container-scroller">
+
+      <!-- partial:../../partials/_navbar.html -->
+      <%- include('./partials/navbar.ejs') %>
+      <!-- partial -->
+
+      <div class="container-fluid page-body-wrapper">
+        <!-- partial:../../partials/_sidebar.html -->
+        <%- include('./partials/sidebar.ejs') %>
+        <!-- partial -->
+        <div class="main-panel">
+
+          <div class="content-wrapper">
+            <div class="page-header">
+              <h3 class="page-title"> Fill the car form below </h3>
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="#">Form</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Form elements</li>
+                </ol>
+              </nav>
+            </div>
+            <div class="row">
+              <div class="col-12 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h2 class="card-title">Your car Information</h2>
+                    <form action="/carform" class="pt-3" method="post" enctype="multipart/form-data">
+                    <form class="forms-sample">
+
+                      <div class="form-group">
+                        <label for="  Model"><b>Model Name</b></label>
+                        <input type="text" class="form-control" id="  Model" name="Model" placeholder="Enter Model " required>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="  Make"><b>Make Name</b></label>
+                        <input type="text" class="form-control" id="  Make" name="Make" placeholder="Enter make" required>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="  Year"><b>Manufacturing Year</b></label>
+                        <input type="number" class="form-control" id="  Year" name="Year" placeholder="Enter year" required>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="  NumberPlate"><b>Number Plate</b></label>
+                        <input type="text" class="form-control" id="  NumberPlate" name="NumberPlate" placeholder="Enter Number Plate" required>
+                      </div>
+
+                      
+                      <div class="form-group">
+                        <label for="  BodyType"><b>Body Type</b></label>
+                        <select name="BodyType" id="  BodyType" aria-placeholder="Choose">
+                            <option name="BodyType"> Sedan </option>
+                            <option name="BodyType"> HatchBack </option>
+                            <option name="BodyType"> MUV/SUV </option>
+                            <option name="BodyType"> Convertible </option>
+                            <option name="BodyType"> Station Wagon </option>
+                            <option name="BodyType"> MiniVan/Van </option>
+                            <option name="BodyType"> Jeep </option>
+                            <option name="BodyType"> Coupe </option>     
+                            <option name="BodyType"> Sports Car </option>
+                            <option name="BodyType"> Pickup Truck </option>
+                            <option name="BodyType"> Crossovers </option>
+                            <option name="BodyType"> MPV </option>
+                            <option name="BodyType"> Microcars </option>
+                            <option name="BodyType"> Limousines </option>
+                        </select>
+
+                      </div>
+
+                      <div class="form-group">
+                        <label for="  totalseats"> <b>Number of seats </b></label>
+                        <input type="number" class="form-control" id="  totalseats"name="totalseats" placeholder="Enter total seats" required>
+                      </div>
+                       <br> 
+                      <div class="form-group">
+                        <label for="  enginecap"><b>Engine Capacity</b></label>
+                        <input type="number" class="form-control" id="  enginecap" name="enginecap" placeholder="cc" required>
+                      </div>
+                      <br>
+                      <div class="form-group">
+                        <label for="  mileage"><b>Fuel</b></label>
+                        <input type="number" class="form-control" id="fuel"name="fuel" placeholder="kmpl" required>
+                      </div>
+                      <br>
+                      <div class="form-group">
+                        <label for="  transmission"><b>Transmission</b></label>
+                        <select name="transmission" id="  transmission">
+                            <option name="transmission">Auto</option>
+                            <option name="transmission">Manual</option>
+                        </select>
+                      </div>
+                      <br>
+                      <div class="form-group">
+                        <label for="  AC"><b>Auto Mobile Air Conditioning System</b></label>
+                        <select name="AC" id="  AC">
+                            <option name="AC">Yes</option>
+                            <option name="AC">No</option>
+                        </select>    
+                      </div>
+                      <br>
+                      <div class="form-group">
+                        <label for="  wirelessTech"><b>Wireless Technology </b></label>
+                        <select name="wirelessTech" id="  wirelessTech">
+                            <option name="wirelessTech">Yes</option>
+                            <option name="wirelessTech">No</option>
+                        </select>
+                      </div>
+                      <br>
+            
+
+                      <div class="form-group">
+                        <label><b>Upload your Car's picture</b></label>
+                        <input type="file" id="one" name="image" class="file-upload-default" multiple>
+                        
+                          <div class="input-group col-xs-12">
+                            <input type="text" class="form-control file-upload-info" disabled placeholder="Upload Image">
+                            <span class="input-group-append">
+                              <button class="file-upload-browse btn btn-gradient-primary" type="button" >Upload </button>
+                            </span>
+                          </div> 
+                      </div>
+
+                      <div class="mt-3">
+                        <a href="seeMyCars">  
+                          <button class="btn btn-primary btn-lg btn-block" > Submit Car Information </button>  
+                        </a>
+                      </div>
+                 
+                    </form>
+                    </form>
+                  </div>
+                </div>
+              </div>
+
+              
+          <!-- partial -->
+        </div>
+        <!-- main-panel ends -->
+      </div>
+      <!-- footer -->
+      <%- include('./partials/footer.ejs') %>
+      <!-- End of footer -->
+      
+      <!-- page-body-wrapper ends -->
+    </div>
+    <!-- container-scroller -->
+    <!-- plugins:js -->
+    
+    <script src=" vendors/js/vendor.bundle.base.js"></script>
+
+    <script src=" js/off-canvas.js"></script>
+    <script src=" js/hoverable-collapse.js"></script>
+    <script src=" js/misc.js"></script>
+    <!-- endinject -->
+    <!-- Custom js for this page -->
+    <script src=" js/file-upload.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <!-- End custom js for this page -->
+  </body>
+</html>

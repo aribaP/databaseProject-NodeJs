@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Rent A CAR  | Add Your Car</title>
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="vendors/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css">
+
+    <link rel="stylesheet" href="addcar.css">
+    <!-- End layout styles -->
+    <link rel="shortcut icon" href="favicon.ico" />
+  </head>
+  <body>
+    <div class="container-scroller">
+      <!-- partial:../../partials/_navbar.html -->
+      <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 light-top d-flex flex-row">
+        <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+          <a class="navbar-brand brand-logo" href="HomePage.ejs"><img src="logo.jpg" alt="logo" /></a>
+          <a class="navbar-brand brand-logo-mini" href="HomePage.ejs"><img src="logo.jpg" alt="logo" /></a>
+        </div>
+        <div class="navbar-menu-wrapper d-flex align-items-stretch">
+          <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+            <span class="mdi mdi-menu"></span>
+          </button>
+          <ul class="navbar-nav navbar-nav-right">
+            <li class="nav-item nav-profile dropdown">
+              <a class="nav-link dropdown-toggle" id="profileDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
+                <div class="nav-profile-text">
+                  <p class="mb-1 text-black">Hi, user!</p>
+                </div>
+              </a>
+              <div class="dropdown-menu navbar-dropdown" aria-labelledby="profileDropdown">
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="login">
+                  <i class="mdi mdi-logout mr-2 text-primary"></i> Signout </a>
+              </div>
+            </li>
+          </ul>
+          <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+            <span class="mdi mdi-menu"></span>
+          </button>
+        </div>
+      </nav>
+      <!-- partial -->
+      <div class="container-fluid page-body-wrapper">
+        <!-- partial:../../partials/_sidebar.html -->
+        <nav class="sidebar sidebar-offcanvas" id="sidebar">
+          <ul class="nav">
+            <li class="nav-item">
+              <a class="nav-link" href="HomePage">
+                <span class="menu-title">Home Page</span>
+                <i class="mdi mdi-home menu-icon"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="carform">
+                <span class="menu-title">Add a Car</span>
+                <i class='fas fa-car menu-icon'></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="">
+                <span class="menu-title">See Cars</span>
+                <i class="mdi mdi-contacts menu-icon"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/forms/basic_elements.html">
+                <span class="menu-title">See my Rented Cars</span>
+                <i class="mdi mdi-format-list-bulleted menu-icon"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/charts/chartjs.html">
+                <span class="menu-title">Transaction History</span>
+                <i class="mdi mdi-chart-bar menu-icon"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/charts/chartjs.html">
+                <span class="menu-title">Request to Rent a Car</span>
+                <i class='fas fa-car menu-icon'></i>
+              </a>
+            </li> 
+          </ul>
+        </nav>
+        <!-- partial -->
+        <div class="main-panel">
+          <div class="content-wrapper">
+            <div class="page-header">
+              <h3 class="page-title"> Fill the car form below </h3>
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="#">Form</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Form elements</li>
+                </ol>
+              </nav>
+            </div>
+            <div class="row">
+              <div class="col-12 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h2 class="card-title">Add your car's specifications</h2>
+                   
+                    <form class="forms-sample">
+
+                      
+
+                      <div class="form-group">
+                        <label for="  BodyType"><b>Body Type</b></label>
+                        <select name="form-control" id="  BodyType" aria-placeholder="Choose">
+                            <option name="BodyType"> Sedan </option>
+                            <option name="BodyType"> HatchBack </option>
+                            <option name="BodyType"> MUV/SUV </option>
+                            <option name="BodyType"> Convertible </option>
+                            <option name="BodyType"> Station Wagon </option>
+                            <option name="BodyType"> MiniVan/Van </option>
+                            <option name="BodyType"> Jeep </option>
+                            <option name="BodyType"> Coupe </option>     
+                            <option name="BodyType"> Sports Car </option>
+                            <option name="BodyType"> Pickup Truck </option>
+                            <option name="BodyType"> Crossovers </option>
+                            <option name="BodyType"> MPV </option>
+                            <option name="BodyType"> Microcars </option>
+                            <option name="BodyType"> Limousines </option>
+                        </select>
+
+                      </div>
+
+                      <div class="form-group">
+                        <label for="  totalseats"> <b>Number of seats </b></label>
+                        <input type="number" class="form-control" id="  totalseats"name="totalseats" placeholder="Enter total seats" required>
+                      </div>
+                       <br> 
+                      <div class="form-group">
+                        <label for="  enginecap"><b>Engine Capacity</b></label>
+                        <input type="number" class="form-control" id="  enginecap" name="enginecap" placeholder="cc" required>
+                      </div>
+                      <br>
+                      <div class="form-group">
+                        <label for="  mileage"><b>Mileage</b></label>
+                        <input type="number" class="form-control" id="  mileage"name="mileage" placeholder="kmpl" required>
+                      </div>
+                      <br>
+                      <div class="form-group">
+                        <label for="  transmission"><b>Transmission</b></label>
+                        <select name="form-control" id="  transmission">
+                            <option name="transmission">Auto</option>
+                            <option name="transmission">Manual</option>
+                        </select>
+                      </div>
+                      <br>
+                      <div class="form-group">
+                        <label for="  AC"><b>Auto Mobile Air Conditioning System</b></label>
+                        <select name="form-control" id="  AC">
+                            <option name="AC">Yes</option>
+                            <option name="AC">No</option>
+                        </select>    
+                      </div>
+                      <br>
+                      <div class="form-group">
+                        <label for="  wirelessTech"><b>Wireless Technology </b></label>
+                        <select name="form-control" id="  wirelessTech">
+                            <option name="wirelessTech">Yes</option>
+                            <option name="wirelessTech">No</option>
+                        </select>
+                      </div>
+                      <br>
+            
+                      <div class="form-group">
+                        <label><b>Upload your Car's picture</b></label>
+                        <input type="file" name="carImage" class="file-upload-default">
+                        <div class="input-group col-xs-12">
+                          <input type="text" class="form-control file-upload-info" disabled placeholder="Upload Image">
+                          <span class="input-group-append">
+                            <button class="file-upload-browse btn btn-gradient-primary" type="button">Upload</button>
+                          </span>
+                        </div>
+                      </div>
+
+                      <br><br>
+                    
+                      <button type="submit" class="btn btn-gradient-primary mr-2">Submit</button>
+                      <button class="btn btn-light">Cancel</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+          <!-- partial -->
+        </div>
+        <!-- main-panel ends -->
+      </div>
+      <!-- page-body-wrapper ends -->
+    </div>
+    <!-- container-scroller -->
+    <!-- plugins:js -->
+    <script src=" vendors/js/vendor.bundle.base.js"></script>
+
+    <script src=" js/off-canvas.js"></script>
+    <script src=" js/hoverable-collapse.js"></script>
+    <script src=" js/misc.js"></script>
+    <!-- endinject -->
+    <!-- Custom js for this page -->
+    <script src=" js/file-upload.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <!-- End custom js for this page -->
+  </body>
+</html>

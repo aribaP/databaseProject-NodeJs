@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Rent A CAR  | Post A Car </title>
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="vendors/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css">
+
+    <link rel="stylesheet" href="addcar.css">
+    <!-- End layout styles -->
+    <link rel="shortcut icon" href="favicon.ico" />
+  </head>
+  <body>
+    <div class="container-scroller">
+
+      <!-- partial:../../partials/_navbar.html -->
+      <%- include('./partials/navbar.ejs') %>
+      <!-- partial -->
+
+      <div class="container-fluid page-body-wrapper">
+        <!-- partial:../../partials/_sidebar.html -->
+        <%- include('./partials/sidebar.ejs') %>
+        <!-- partial -->
+        <div class="main-panel">
+
+          <div class="content-wrapper">
+            <div class="page-header">
+              <h3 class="page-title"> Fill the car form below </h3>
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item active" aria-current="page">Click here </li>
+                  <li class="breadcrumb-item"><a href="postedCars"><h4 style="color:black;"></h3style>See your posted Cars</h4></a></li>
+                </ol>
+              </nav>
+            </div>
+            <div class="row">
+              <div class="col-12 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h2 class="card-title">Confirm your posting</h2>
+                    <form action="/newentry" class="pt-3" method="post">
+                    <form class="forms-sample">
+
+                      <% if(result.length > 0){ %>
+                      <div class="form-group">
+                        <label for="  Model"><b>Drop your car</b></label>
+                        <input type="date" class="form-control" id="inputEstDate" name="dropcar" placeholder="dropcar" required>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="  Make"><b>Take your car back</b></label>
+                        <input type="date" class="form-control" id="inputEstDate" name="returnCar" placeholder="returnCar" required>
+                      </div>
+
+                      
+                      <div class="product">
+                        
+                          <% for(var i=0; i < result.length; i++){ %>
+                            <img src="<%=result[i].carData%>" alt="">
+                            <input type="radio" id="cars" name="cars" value= "<%= result[i].NumberPlate %>" required>
+                            <label for="cars"> <br><br><b>Number Plate : </b> <%= result[i].NumberPlate%></label><br>
+                            
+                            <p><b> Make Name :</b> <%= result[i].MakeName %></p>
+                            <p><b> Model Name :</b> <%= result[i].ModelName %></p>
+                            <p><b> Manufacturing Year :</b> <%= result[i].ManufacturingYear %></p>
+                            <p><b> Number Plate :</b> <%= result[i].NumberPlate %></p>
+                            
+                            <br><br><br>
+                            <% } %>
+                         
+                            
+                      </div>
+                      <br><br>
+                                            
+                      <div class="mt-3">
+                        <a href="HomePage">  
+                          <tr>
+                            <th>
+                              <script>
+                                function myFunction() {
+                                  confirm("Confirm Posting? Amount will be shown after you confirm posting.");
+                                }
+                              </script>
+
+
+                              <button onclick="myFunction()"class="btn btn-gradient-primary"style="width:100%;" > Confirm Posting </button>  
+                              
+                            </th>
+                        </tr>
+
+                        </a>
+                      </div>
+                      
+
+                      <% } else{ %>
+                        <h1>No cars to post.</h1>
+                      <% } %>
+                 
+                    </form>
+                    </form>
+                  </div>
+                </div>
+              </div>
+
+              
+          <!-- partial -->
+        </div>
+        <!-- main-panel ends -->
+      </div>
+      <!-- footer -->
+      <%- include('./partials/footer.ejs') %>
+      <!-- End of footer -->
+      
+      <!-- page-body-wrapper ends -->
+    </div>
+    <!-- container-scroller -->
+    <!-- plugins:js -->
+    
+    <script src=" vendors/js/vendor.bundle.base.js"></script>
+
+    <script src=" js/off-canvas.js"></script>
+    <script src=" js/hoverable-collapse.js"></script>
+    <script src=" js/misc.js"></script>
+    <!-- endinject -->
+    <!-- Custom js for this page -->
+    <script src=" js/file-upload.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <!-- End custom js for this page -->
+  </body>
+</html>
